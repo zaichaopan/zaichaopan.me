@@ -1,0 +1,25 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+@import './lib/nprogress';
+@import './_variables';
+@import './components/authnav';
+.nav-link-active:after {
+    content: "";
+    border-right: 1px solid #8795A1;
+    height: 35px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 0;
+    top: 23px;
+    left: 26px;
+}
+
+.profile {
+    strong {
+        @apply text-grey-darkest;
+        a {
+            @apply italic;
+        }
+    }
+}
