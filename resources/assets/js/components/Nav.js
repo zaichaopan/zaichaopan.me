@@ -19,20 +19,6 @@ class Nav extends Component {
     };
   }
 
-  toggleMobileNav () {
-    this.setState((prevState, props) => ({
-      hideMobileNav: !prevState.hideMobileNav
-    }));
-  }
-
-  closeMobileNav () {
-    if (!this.state.hideMobileNav) {
-      this.setState({
-        hideMobileNav: true
-      });
-    }
-  }
-
   handleLogout () {
     this.props.logoutUser(() => this.props.history.push('/'));
   }

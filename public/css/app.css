@@ -4715,24 +4715,49 @@ button,
   }
 }
 
-.nav-link-active:after {
-  content: "";
-  border-right: 1px solid #8795a1;
-  height: 35px;
-  position: absolute;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 0;
-  top: 23px;
-  left: 26px;
-}
-
 .profile strong {
   color: #3d4852;
 }
 
 .profile strong a {
   font-style: italic;
+}
+
+.left-panel {
+  top: 4rem;
+  color: #666;
+  background: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.left-panel.mobile-hidden {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.left-panel .divider {
+  margin: 20px 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#dcdcdc), to(rgba(220, 220, 220, 0)));
+  background: linear-gradient(to right, #dcdcdc, rgba(220, 220, 220, 0));
+}
+
+.left-panel a {
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .left-panel {
+    top: 0;
+  }
+
+  .left-panel.mobile-hidden {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
 @media (min-width: 576px) {

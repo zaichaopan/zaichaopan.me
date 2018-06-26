@@ -4,22 +4,39 @@
 @import './lib/nprogress';
 @import './_variables';
 @import './components/authnav';
-.nav-link-active:after {
-    content: "";
-    border-right: 1px solid #8795A1;
-    height: 35px;
-    position: absolute;
-    transform: rotate(90deg);
-    top: 0;
-    top: 23px;
-    left: 26px;
-}
-
 .profile {
     strong {
         @apply text-grey-darkest;
         a {
             @apply italic;
+        }
+    }
+}
+
+.left-panel {
+    top: 4rem;
+    color: #666;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0, 0);
+    &.mobile-hidden {
+        transform: translate(-100%, 0);
+    }
+    .divider {
+        margin: 20px 0;
+        height: 1px;
+        background: linear-gradient(to right, #DCDCDC, rgba(220, 220, 220, 0));
+    }
+    a {
+        color: #666;
+    }
+}
+
+@media (min-width: $md) {
+    .left-panel {
+        top: 0;
+        &.mobile-hidden {
+            transform: translate(0, 0);
         }
     }
 }

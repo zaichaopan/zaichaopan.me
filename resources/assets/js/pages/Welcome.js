@@ -7,15 +7,7 @@ const Welcome = () => {
 
         <p className="leading-normal my-4">I am a full-stack&nbsp;
           <strong>web developer</strong> based in Vancouver. I have a diverse set of skills in both backend and front end development, from&nbsp;
-          <strong>PHP</strong>,&nbsp;
-          <strong>Laravel</strong>,&nbsp;
-          <strong>JavaScript</strong>,&nbsp;
-          <strong>MySQL</strong>,
-          <strong>Vue</strong>,
-          <strong>React </strong>to&nbsp;
-          <strong>HTML</strong>,&nbsp;
-          <strong>Sass</strong> and&nbsp;
-          <strong>CSS</strong>.
+          <strong>PHP</strong>,&nbsp; <strong>Laravel</strong>, <strong>JavaScript</strong>, <strong>MySQL</strong>, <strong>Vue</strong>, <strong>React</strong> to <strong>HTML</strong>, <strong>Sass</strong> and <strong>CSS</strong>.
         </p>
 
         <p className="leading-normal my-4">
