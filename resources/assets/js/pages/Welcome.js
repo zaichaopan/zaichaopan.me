@@ -3,8 +3,7 @@ import DocumentTitle from 'react-document-title';
 const Welcome = () => {
   return (
     <DocumentTitle title={`Welcome - ${window.App.name}`}>
-      <div className="profile flex flex-col flex-1 p-8 font-hairline font-xs text-grey-darker mx-auto mt-8">
-
+      <div className="profile flex flex-col flex-1 p-8 font-light text-grey-darker mx-auto mt-8 tracking-wide">
         <p className="leading-normal my-4">I am a full-stack&nbsp;
           <strong>web developer</strong> based in Vancouver. I have a diverse set of skills in both backend and front end development, from&nbsp;
           <strong>PHP</strong>,&nbsp; <strong>Laravel</strong>, <strong>JavaScript</strong>, <strong>MySQL</strong>, <strong>Vue</strong>, <strong>React</strong> to <strong>HTML</strong>, <strong>Sass</strong> and <strong>CSS</strong>.

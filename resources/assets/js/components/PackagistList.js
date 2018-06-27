@@ -32,12 +32,12 @@ class PackagistList extends Component {
             <div className="flex items-center justify-between">
               <a
                 href={item.url}
-                className="text-xl text-grey-darkest uppercase font-bold no-underline hover:underline"
+                className="text-xl text-grey-darkest uppercase no-underline hover:underline"
                 target="_blank"
                 rel="noopener noreferrer">{item.name}
               </a>
             </div>
-            <p className="text-grey-dark py-2 font-thin text-sm"> {item.description}. </p>
+            <p className="text-grey-darker py-2 text-sm"> {item.description}. </p>
           </div>
 
           <div className="info flex mt-4 items-center">

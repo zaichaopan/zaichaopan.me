@@ -8,9 +8,9 @@
     max-width: 800px;
     strong {
         @apply text-grey-darkest;
-        a {
-            @apply italic;
-        }
+    }
+    a {
+        @apply italic;
     }
 }
 

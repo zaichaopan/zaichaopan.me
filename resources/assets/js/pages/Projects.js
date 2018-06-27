@@ -3,6 +3,7 @@ import DocumentTitle from 'react-document-title';
 import Tabs from '../components/Tabs';
 import PackagistList from '../components/PackagistList';
 import NpmList from '../components/NpmList';
+import OtherPackageList from '../components/OtherPackageList';
 
 class Projects extends Component {
   constructor (props) {
@@ -32,6 +33,10 @@ class Projects extends Component {
           <path fill="#CB3837" d="M0 0v6h5v1h4V6h9V0"></path>
           <path fill="#FFF" d="M1 1v4h2V2h1v3h1V1h1v5h2V2h1v2H8v1h2V1h1v4h2V2h1v3h1V2h1v3h1V1"></path>
           </svg>`}
+      }, {
+        id: 'others',
+        isHtml: false,
+        name: 'others'
       }
     ];
   }
@@ -43,7 +48,7 @@ class Projects extends Component {
   render () {
     return (
       <DocumentTitle title={`Projects - ${window.App.name}`}>
-        <div className="w-4/5 mx-auto p-2 mx-auto flex flex-col mt-8">
+        <div className="w-full p-8 md:w-4/5 mx-auto md:p-2 mx-auto flex flex-col mt-8">
           <Tabs
             tabs={this.getTabs()}
             selectTab={tab => this.handleTabSelected(tab)}
@@ -52,7 +57,7 @@ class Projects extends Component {
 
           {this.state.currentTab.id === 'packagist' && <PackagistList />}
           {this.state.currentTab.id === 'npm' && <NpmList />}
-
+          {this.state.currentTab.id === 'others' && <OtherPackageList />}
         </div>
       </DocumentTitle >
     );

@@ -22,7 +22,7 @@ class Tabs extends Component {
           onClick={e => this.selectTab(tab)}>
           {tab.isHtml
             ? (<div dangerouslySetInnerHTML={tab.markUp} />)
-            : <div>{tab.name}</div>}
+            : <div className="uppercase text-grey-darker text-sm">{tab.name}</div>}
         </li>
       );
     });
