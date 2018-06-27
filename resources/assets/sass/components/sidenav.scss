@@ -1,0 +1,27 @@
+.left-panel {
+    top: 4rem;
+    color: #666;
+    z-index: 1;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0, 0);
+    img {
+        width: 127px;
+    }
+    ;
+    &.mobile-hidden {
+        transform: translate(-100%, 0);
+    }
+    a {
+        color: #666;
+    }
+}
+
+@screen md {
+    .left-panel {
+        top: 0;
+        &.mobile-hidden {
+            transform: translate(0, 0);
+        }
+    }
+}

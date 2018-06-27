@@ -14,12 +14,4 @@ require('laravel-mix-tailwind');
 
 mix.react('resources/assets/js/app.js', 'public/js')
   .sass('resources/assets/sass/app.scss', 'public/css')
-  .tailwind()
-  .webpackConfig({
-    externals: [
-      'child_process'
-    ],
-    node: {
-      fs: 'empty'
-    }
-  });
+  .tailwind();

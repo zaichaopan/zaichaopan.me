@@ -29,7 +29,7 @@ class Tabs extends Component {
 
     return (
       <div className="tab-nav">
-        <ul className="tabs list-reset flex items-center border-b border-grey-light">
+        <ul className="tabs list-reset flex items-center">
           {tabNav}
         </ul>
       </div>

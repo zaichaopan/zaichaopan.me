@@ -2,46 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import './lib/nprogress';
-@import './_variables';
-@import './components/authnav';
-.profile {
-    max-width: 800px;
-    strong {
-        @apply text-grey-darkest;
-    }
-    a {
-        @apply italic;
-    }
-}
+@import './components/sidenav';
+@import './components/tabs';
+
 
 .divider {
     margin: 20px 0;
     height: 1px;
     background: linear-gradient(to right, #DCDCDC, rgba(220, 220, 220, 0));
-}
-
-.left-panel {
-    top: 4rem;
-    color: #666;
-    z-index: 1;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
-    transform: translate(0, 0);
-    &.mobile-hidden {
-        transform: translate(-100%, 0);
-    }
-    a {
-        color: #666;
-    }
-}
-
-@media (min-width: $md) {
-    .left-panel {
-        top: 0;
-        &.mobile-hidden {
-            transform: translate(0, 0);
-        }
-    }
 }
 
 .php {
@@ -52,24 +20,6 @@
     background: #f1e05a;
 }
 
-.tab-nav {
-    margin-bottom: 5rem;
-    .tabs {
-        margin-bottom: -1px;
-        li {
-            background: white;
-        }
-        .active {
-            @apply border;
-            background: #fff;
-            @apply border-grey-light;
-            border-bottom: none;
-            margin-bottom: -1px;
-            border-top-right-radius: 3px;
-            border-top-left-radius: 3px;
-        }
-    }
-}
 
 .keyword {
     background-color: #f1f8ff;

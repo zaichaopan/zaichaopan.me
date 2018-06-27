@@ -1,0 +1,14 @@
+.tab-nav {
+    margin-bottom: 5rem;
+    .tabs {
+        @apply border-b border-grey-light;
+        li {
+            @apply bg-white;
+            &.active {
+                @apply border border-grey-light bg-white border-b-0 -mb-1;
+                border-top-right-radius: 3px;
+                border-top-left-radius: 3px;
+            }
+        }
+    }
+}

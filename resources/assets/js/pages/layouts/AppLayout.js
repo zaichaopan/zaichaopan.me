@@ -6,10 +6,6 @@ const propTypes = {
   children: PropTypes.element.isRequired
 };
 
-let imgStyle = {
-  width: '127px'
-};
-
 class AppLayout extends Component {
   constructor (props) {
     super(props);
@@ -35,7 +31,7 @@ class AppLayout extends Component {
   render () {
     return (
       <div className="flex min-h-screen">
-        <div className={`left-panel border-r border-grey-lighter w-3/4 md:w-1/4 flex align-items justify-center py-8 md:py-0 fixed h-full ${this.state.hideMobileNav ? 'mobile-hidden' : ''}`}>
+        <div className={`left-panel border-r border-grey-lighter w-3/4 md:w-1/4 flex align-items justify-center md:py-8 fixed h-full ${this.state.hideMobileNav ? 'mobile-hidden' : ''}`}>
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center mt-8">
               <div>
@@ -43,7 +39,6 @@ class AppLayout extends Component {
                   className="rounded"
                   src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg"
                   alt="profile"
-                  style={imgStyle}
                 />
               </div>
               <h1 className="p-2 pt-6 tracking-wide text-xl font-serif">ZAI CHAO PAN</h1>
@@ -54,9 +49,9 @@ class AppLayout extends Component {
         </div>
 
         <div className="right-panel flex flex-col w-full md:w-3/4 ml-auto">
-          <div className="top-bar block md:hidden py-2 px-8 border-b border-grey-lighter h-16 flex items-center justify-between">
+          <div className="top-bar block md:hidden py-2 px-8 border-b border-grey-lighter h-16 flex items-center justify-between fixed bg-white w-full z-10">
             <div className="top-bar-logo">
-              <span className="text-grey-darker font-semibold">ZAI CHAO PAN</span>
+              <span className="text-grey-darker font-serif">ZAI CHAO PAN</span>
             </div>
             <div className="flex items-center" onClick={() => this.toggleMobileNav()}>
               {
