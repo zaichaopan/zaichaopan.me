@@ -5,6 +5,7 @@
 @import './_variables';
 @import './components/authnav';
 .profile {
+    max-width: 800px;
     strong {
         @apply text-grey-darkest;
         a {
@@ -68,4 +69,9 @@
             border-top-left-radius: 3px;
         }
     }
+}
+
+.keyword {
+    background-color: #f1f8ff;
+    color: #0366d6
 }

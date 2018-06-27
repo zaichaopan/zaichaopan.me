@@ -4715,6 +4715,10 @@ button,
   }
 }
 
+.profile {
+  max-width: 800px;
+}
+
 .profile strong {
   color: #3d4852;
 }
@@ -4789,6 +4793,11 @@ button,
   margin-bottom: -1px;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+}
+
+.keyword {
+  background-color: #f1f8ff;
+  color: #0366d6;
 }
 
 @media (min-width: 576px) {
