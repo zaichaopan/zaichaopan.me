@@ -1,20 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import AuthNav from '../components/AuthNav';
-import GuestNav from '../components/GuestNav';
 
 const propTypes = {
   authenticated: PropTypes.bool.isRequired
 };
 
 const NotFound = (props) => {
-  const nav = props.authenticated ? <AuthNav /> : <GuestNav />;
-
   return (
     <div className="flex flex-col min-h-screen">
-      {nav}
-
       <div className="flex flex-col flex-1 items-center">
         <h1 className="py-8">Sorry, that page isn’t here.</h1>
         <p className="text-grey-dark">

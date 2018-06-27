@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Welcome from '../pages/Welcome';
 import SignIn from '../pages/auth/SignIn';
-import Register from '../pages/auth/Register';
+import Projects from '../pages/Projects';
 import ForgotPassword from '../pages/auth/ForgotPassword';
 import ResetPassword from '../pages/auth/ResetPassword';
 import NotFound from '../pages/404';
 import PropTypes from 'prop-types';
-import Home from '../pages/Home';
-import Profile from '../pages/Profile';
+import Work from '../pages/Work';
 import { connect } from 'react-redux';
 import { setLoading } from '../actions/loading';
 import { initAuthFromExistingToken } from '../actions/auth';
@@ -37,12 +36,11 @@ class App extends Component {
         <div className="flex flex-col min-h-screen">
           <Switch>
             <AppRoute exact path="/" component={Welcome} />
-            <AppRoute path="/register" component={Register} />
             <AppRoute path="/signin" component={SignIn} />
             <AppRoute path="/forgot-password" component={ForgotPassword} />
             <AppRoute path="/password/reset/:token" component={ResetPassword} />
-            <AppRoute path="/home" component={Home} />
-            <AppRoute path="/profile/:id" component={Profile} />
+            <AppRoute path="/projects" component={Projects} />
+            <AppRoute path="/work" component={Work} />
             <Route component={NotFound} />
           </Switch>
         </div>
