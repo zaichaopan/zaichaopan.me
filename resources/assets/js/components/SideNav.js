@@ -13,43 +13,48 @@ class SideNav extends Component {
 
   render () {
     return (
-      <ul className="list-reset flex flex-col font-thin w-full">
+      <ul className="menu list-reset flex flex-col font-thin w-full">
         <li className="divider"></li>
         <li
-          className="p-2 text-sm"
+          className="p-2"
           onClick={() => this.closeMobileNav()}>
           <NavLink
             exact
             to="/"
             activeClassName="font-semibold"
-            className="text-sm no-underline hover:underline">Home
+            className="link text-xs uppercase tracking-wide no-underline">home
           </NavLink></li>
-        <li className="p-2 text-sm" onClick={() => this.closeMobileNav()}>
+        <li className="p-2" onClick={() => this.closeMobileNav()}>
           <NavLink
             to="/work"
             activeClassName="font-semibold"
-            className="text-sm no-underline hover:underline">Work
+            className="link text-xs uppercase tracking-wide no-underline">blog
           </NavLink>
         </li>
-        <li className="p-2 text-sm" onClick={() => this.closeMobileNav()}>
+        <li className="p-2" onClick={() => this.closeMobileNav()}>
           <NavLink
             to="/projects"
             activeClassName="font-semibold"
-            className="text-sm no-underline hover:underline">Projects
+            className="link text-xs uppercase tracking-wide no-underline">projects
           </NavLink>
         </li>
         <li
-          className="p-2 text-sm"
+          className="p-2"
           onClick={() => this.closeMobileNav()}>
           <a
-            className="text-sm no-underline hover:underline"
+            className="link text-xs uppercase tracking-wide no-underline"
             href="./files/resume.pdf"
             target="_blank"
-            rel="noopener noreferrer">Resume </a>
+            rel="noopener noreferrer">resume</a>
         </li>
         <li
-          className="p-2 text-sm"
-          onClick={() => this.closeMobileNav()}>Hire Me
+          className="p-2"
+          onClick={() => this.closeMobileNav()}>
+          <a
+            href="mailto:zaichaopan@gmail.com"
+            className="link text-xs uppercase tracking-wide no-underline">
+            hire me
+          </a>
         </li>
         <li className="divider"></li>
         <li>

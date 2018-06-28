@@ -18,13 +18,13 @@
             'google_client_id' => config('services.google.client_id')
         ]) !!};
     </script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="h-full font-sans font-antialised font-normal text-darkest leading-normal bg-indigo-dark">
+<body class="h-full font-sans font-antialised font-normal text-darkest leading-normal bg-black">
     <div id="app" class="flex flex-col bg-white">
     </div>
 </body>

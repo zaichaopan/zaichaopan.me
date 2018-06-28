@@ -31,7 +31,7 @@ class AppLayout extends Component {
   render () {
     return (
       <div className="flex min-h-screen">
-        <div className={`left-panel border-r border-grey-lighter w-3/4 md:w-1/4 flex align-items justify-center md:py-8 fixed h-full ${this.state.hideMobileNav ? 'mobile-hidden' : ''}`}>
+        <div id="left-panel" className={`fixed left-panel border-r border-grey-lighter w-3/4 md:w-1/4 flex align-items justify-center md:py-8 h-full ${this.state.hideMobileNav ? 'mobile-hidden' : ''}`}>
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center mt-8">
               <div>

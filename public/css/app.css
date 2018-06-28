@@ -6332,7 +6332,7 @@ table {
 }
 
 #nprogress .bar {
-  background: #6574cd;
+  background: #3d4852;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -6349,8 +6349,8 @@ table {
   right: 0;
   width: 100px;
   height: 100%;
-  -webkit-box-shadow: 0 0 10px #7886d7, 0 0 5px #7886d7;
-          box-shadow: 0 0 10px #7886d7, 0 0 5px #7886d7;
+  -webkit-box-shadow: 0 0 10px #606f7b, 0 0 5px #8795a1;
+          box-shadow: 0 0 10px #606f7b, 0 0 5px #8795a1;
   opacity: 1;
   -webkit-transform: rotate(3deg) translate(0, -4px);
           transform: rotate(3deg) translate(0, -4px);
@@ -6365,8 +6365,13 @@ table {
   position: absolute;
 }
 
+.nprogress-busy .left-panel {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
 .left-panel {
-  top: 4rem;
+  top: 5rem;
   color: #666;
   z-index: 1;
   background: #fff;
@@ -6387,6 +6392,31 @@ table {
 
 .left-panel a {
   color: #666;
+}
+
+.left-panel .menu .link {
+  position: relative;
+}
+
+.left-panel .menu .link:before {
+  background-color: #8795a1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.left-panel .menu .link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @media (min-width: 768px) {
@@ -6423,6 +6453,20 @@ table {
   border-top-left-radius: 3px;
 }
 
+.profile {
+  max-width: 800px;
+}
+
+.profile strong {
+  color: #3d4852;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.profile a {
+  font-style: italic;
+}
+
 .divider {
   margin: 20px 0;
   height: 1px;
@@ -6441,6 +6485,37 @@ table {
 .keyword {
   background-color: #f1f8ff;
   color: #0366d6;
+}
+
+.fade-in {
+  margin-top: -10px;
+  -webkit-animation: b 3s forwards;
+          animation: b 3s forwards;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes b {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes b {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 576px) {

@@ -15,7 +15,7 @@ if (token) {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
-loadProgressBar(window.axios);
+//loadProgressBar(window.axios);
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

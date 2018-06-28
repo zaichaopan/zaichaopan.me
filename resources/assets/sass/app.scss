@@ -4,8 +4,8 @@
 @import './lib/nprogress';
 @import './components/sidenav';
 @import './components/tabs';
-
-
+// pages
+@import './pages/welcome';
 .divider {
     margin: 20px 0;
     height: 1px;
@@ -20,8 +20,23 @@
     background: #f1e05a;
 }
 
-
 .keyword {
     background-color: #f1f8ff;
     color: #0366d6
+}
+
+.fade-in {
+    margin-top: -10px;
+    animation: b 3s forwards;
+    text-align: center;
+    user-select: none;
+}
+
+@keyframes b {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

@@ -1,7 +1,7 @@
 .profile {
     max-width: 800px;
     strong {
-        @apply text-grey-darkest;
+        @apply text-grey-darkest font-semibold italic;
     }
     a {
         @apply italic;
