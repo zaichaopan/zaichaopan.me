@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import DocumentTitle from 'react-document-title';
+import React, { Component } from 'react'
+import DocumentTitle from 'react-document-title'
 
 class Work extends Component {
   render () {
@@ -9,8 +9,8 @@ class Work extends Component {
           <h1>Work</h1>
         </div>
       </DocumentTitle>
-    );
+    )
   }
 }
 
-export default Work;
+export default Work

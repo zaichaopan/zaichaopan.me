@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import DocumentTitle from 'react-document-title'
-import Tabs from '../components/Tabs'
-import ComposerPackages from '../components/Packages/Composer'
-import NpmPackages from '../components/Packages/Npm'
-import OtherPackageList from '../components/Packages/Other'
+import Tabs from '../../components/Tabs'
+import ComposerPackages from '../../components/Packages/Composer'
+import NpmPackages from '../../components/Packages/Npm'
+import OtherPackageList from '../../components/Packages/Other'
 
 const tabs = [
   {
@@ -11,7 +11,7 @@ const tabs = [
     isHtml: true,
     markUp: {
       __html:
-        '<img class="w-6" src="https://packagist.org/bundles/packagistweb/img/logo-small.png" />'
+                '<img class="w-6" src="https://packagist.org/bundles/packagistweb/img/logo-small.png" />'
     }
   },
   {

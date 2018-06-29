@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Hamburger = () => {
   return (
@@ -13,7 +12,4 @@ const Hamburger = () => {
   )
 }
 
-Hamburger.propTypes = {
-  height: PropTypes.string.isRequired
-}
 export default Hamburger

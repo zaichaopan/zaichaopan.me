@@ -6365,71 +6365,6 @@ table {
   position: absolute;
 }
 
-.profile {
-  max-width: 800px;
-}
-
-.profile strong {
-  color: #3d4852;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.profile a {
-  font-style: italic;
-}
-
-.divider {
-  margin: 20px 0;
-  height: 1px;
-  background: -webkit-gradient(linear, left top, right top, from(#dcdcdc), to(rgba(220, 220, 220, 0)));
-  background: linear-gradient(to right, #dcdcdc, rgba(220, 220, 220, 0));
-}
-
-.php {
-  background: #4f5d95;
-}
-
-.javascript {
-  background: #f1e05a;
-}
-
-.keyword {
-  background-color: #f1f8ff;
-  color: #0366d6;
-}
-
-.fade-in {
-  margin-top: -10px;
-  -webkit-animation: b 3s forwards;
-          animation: b 3s forwards;
-  text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-@-webkit-keyframes b {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes b {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .nav-tab {
   margin-bottom: 5rem;
 }
@@ -6528,6 +6463,71 @@ table {
   .left-panel.mobile-hidden {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+  }
+}
+
+.profile {
+  max-width: 800px;
+}
+
+.profile strong {
+  color: #3d4852;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.profile a {
+  font-style: italic;
+}
+
+.divider {
+  margin: 20px 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#dcdcdc), to(rgba(220, 220, 220, 0)));
+  background: linear-gradient(to right, #dcdcdc, rgba(220, 220, 220, 0));
+}
+
+.php {
+  background: #4f5d95;
+}
+
+.javascript {
+  background: #f1e05a;
+}
+
+.keyword {
+  background-color: #f1f8ff;
+  color: #0366d6;
+}
+
+.fade-in {
+  margin-top: -10px;
+  -webkit-animation: b 3s forwards;
+          animation: b 3s forwards;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes b {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes b {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

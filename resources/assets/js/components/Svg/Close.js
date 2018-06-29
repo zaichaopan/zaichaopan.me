@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const Close = ({ height }) => {
+const Close = () => {
   return (
     <svg
       className="fill-current w-4 h-4 cursor-pointer text-grey"
@@ -15,7 +14,4 @@ const Close = ({ height }) => {
   )
 }
 
-Close.propTypes = {
-  height: PropTypes.string.isRequired
-}
 export default Close

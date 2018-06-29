@@ -1,12 +1,7 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import AppLayout from '../pages/layouts/AppLayout';
-import PropTypes from 'prop-types';
-
-const propTypes = {
-  component: PropTypes.func.isRequired,
-  rest: PropTypes.object
-};
+import React from 'react'
+import { Route } from 'react-router-dom'
+import AppLayout from '../pages/layouts/AppLayout'
+import PropTypes from 'prop-types'
 
 const AppLayoutRoute = ({ component: Component, ...rest }) => {
   return (
@@ -15,9 +10,12 @@ const AppLayoutRoute = ({ component: Component, ...rest }) => {
         <Component {...props} />
       </AppLayout>
     )} />
-  );
-};
+  )
+}
 
-AppLayoutRoute.propTypes = propTypes;
+AppLayoutRoute.propTypes = {
+  component: PropTypes.func.isRequired,
+  rest: PropTypes.object
+}
 
-export default AppLayoutRoute;
+export default AppLayoutRoute

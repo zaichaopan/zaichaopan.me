@@ -1,38 +1,38 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import DocumentTitle from 'react-document-title';
-import { signInUser } from '../../actions/auth';
-import { getIntendedUrl } from '../../helpers/auth';
-import { destructServerErrors, hasError, getError } from '../../helpers/error';
+import React, { Component } from 'react'
+import { Link, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import DocumentTitle from 'react-document-title'
+import { signInUser } from '../../actions/auth'
+import { getIntendedUrl } from '../../helpers/auth'
+import { destructServerErrors, hasError, getError } from '../../helpers/error'
 
 const propTypes = {
   signInUser: PropTypes.func.isRequired,
   googleSignIn: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
-};
+}
 
 class SignIn extends Component {
   constructor (props) {
-    super(props);
-    this.state = {
+    super(props)
+        this.state = {
       email: '',
       password: '',
       errors: ''
-    };
-  }
+    }
+    }
 
   signInSuccess () {
-    getIntendedUrl().then(url => this.props.history.push(url));
-  }
+    getIntendedUrl().then(url => this.props.history.push(url))
+    }
 
   handleSubmit (e) {
-    e.preventDefault();
-    this.props.signInUser(this.state)
+    e.preventDefault()
+        this.props.signInUser(this.state)
       .then(response => this.signInSuccess())
-      .catch(error => this.setState({ errors: destructServerErrors(error) }));
-  }
+      .catch(error => this.setState({ errors: destructServerErrors(error) }))
+    }
 
   handleInputChange (e) {
     this.setState({
@@ -41,13 +41,13 @@ class SignIn extends Component {
         ...this.state.errors,
         ...{ [e.target.name]: '' }
       }
-    });
-  }
+    })
+    }
 
   handleGoogleSignInSuccess (credentials) {
     this.props.googleSignIn(credentials)
       .then(response => this.signInSuccess())
-      .catch(error => this.setState({ errors: destructServerErrors(error) })); ;
+      .catch(error => this.setState({ errors: destructServerErrors(error) }));
   }
 
   render () {
@@ -68,7 +68,7 @@ class SignIn extends Component {
               <h2 className="text-center mt-4 mb-6 text-grey-darkest">Sign in to Level</h2>
               <div className="mb-4">
                 <label className="block text-grey-darkest text-sm font-bold mb-2" htmlFor="email">
-                  Email address
+                                    Email address
                 </label>
                 <input
                   value={this.state.email}
@@ -83,7 +83,7 @@ class SignIn extends Component {
                 />
 
                 {hasError(this.state.errors, 'email') &&
-                  <p className="text-red text-xs pt-2">{getError(this.state.errors, 'email')}</p>
+                                    <p className="text-red text-xs pt-2">{getError(this.state.errors, 'email')}</p>
                 }
 
               </div>
@@ -121,14 +121,14 @@ class SignIn extends Component {
           </div>
         </div>
       </DocumentTitle>
-    );
-  }
+    )
+    }
 }
 
-SignIn.propTypes = propTypes;
+SignIn.propTypes = propTypes
 
 const mapDispatchToProps = {
   signInUser
-};
+}
 
-export default connect(null, mapDispatchToProps)(withRouter(SignIn));
+export default connect(null, mapDispatchToProps)(withRouter(SignIn))

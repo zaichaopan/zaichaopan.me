@@ -1,5 +1,5 @@
-import React from 'react';
-import DocumentTitle from 'react-document-title';
+import React from 'react'
+import DocumentTitle from 'react-document-title'
 
 const Welcome = () => {
   return (
@@ -38,7 +38,7 @@ const Welcome = () => {
         <p className="tracking-wide leading-normal my-4">Thanks for stopping by!</p>
       </div>
     </DocumentTitle>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome
