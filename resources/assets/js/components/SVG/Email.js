@@ -22,6 +22,3 @@ Email.propTypes = {
   height: PropTypes.string.isRequired
 }
 export default Email
-
-
-  

@@ -1,49 +1,43 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
-export default class Tabs extends Component {
-  selectTab (tab) {
-    this.props.selectTab(tab)
-  }
+const renderTabs = (tabs, selectTab, currentTab) => {
+  return tabs.map(tab => {
+    const classes = classNames(
+      'relative',
+      'h-10',
+      'w-48',
+      'flex',
+      'justify-center',
+      'items-center',
+      {
+        active: tab.id === currentTab.id
+      })
 
-  renderTabs () {
-    return this.props.tabs.map(tab => {
-      const classes = classNames(
-        'relative',
-        'h-10',
-        'w-48',
-        'flex',
-        'justify-center',
-        'items-center',
-        {
-          active: tab.id === this.props.currentTab.id
-        })
-
-      return (
-        <li
-          className={classes}
-          key={tab.id}
-          onClick={e => this.selectTab(tab)}>
-          {
-            tab.isHtml
-              ? <div dangerouslySetInnerHTML={tab.markUp} />
-              : <div className="uppercase text-grey-darker text-sm">{tab.name}</div>
-          }
-        </li>
-      )
-    })
-  }
-
-  render () {
     return (
-      <div className='nav-tab'>
-        <ul className='tabs list-reset flex items-center'>
-          {this.renderTabs()}
-        </ul>
-      </div >
+      <li
+        className={classes}
+        key={tab.id}
+        onClick={e => selectTab(tab)}>
+        {
+          tab.isHtml
+            ? <div dangerouslySetInnerHTML={tab.markUp} />
+            : <div className="uppercase text-grey-darker text-sm">{tab.name}</div>
+        }
+      </li>
     )
-  }
+  })
+}
+
+const Tabs = ({ tabs, selectTab, currentTab }) => {
+  return (
+    <div className='nav-tab'>
+      <ul className='tabs list-reset flex items-center'>
+        {renderTabs(tabs, selectTab, currentTab)}
+      </ul>
+    </div >
+  )
 }
 
 Tabs.propTypes = {
@@ -51,3 +45,4 @@ Tabs.propTypes = {
   selectTab: PropTypes.func.isRequired,
   currentTab: PropTypes.object.isRequired
 }
+export default Tabs

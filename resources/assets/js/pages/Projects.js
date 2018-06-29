@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import DocumentTitle from 'react-document-title';
-import PackagistList from '../components/PackagistList';
-import NpmList from '../components/NpmList';
-import OtherPackageList from '../components/OtherPackageList';
-import Tabs from '../components/Tabs';
+import React, { Component } from 'react'
+import DocumentTitle from 'react-document-title'
+import Tabs from '../components/Tabs'
+import ComposerPackages from '../components/Packages/Composer'
+import NpmPackages from '../components/Packages/Npm'
+import OtherPackageList from '../components/Packages/Other'
 
 class Projects extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       packagist: [],
       npmPackages: [],
       currentTab: this.getTabs()[0]
-    };
+    }
   }
 
   getTabs () {
@@ -38,31 +38,38 @@ class Projects extends Component {
         isHtml: false,
         name: 'others'
       }
-    ];
+    ]
   }
 
   handleTabSelected (tab) {
-    this.setState({ currentTab: tab });
+    this.setState({ currentTab: tab })
+  }
+
+  renderPackageList () {
+    switch (true) {
+      case this.state.currentTab.id === 'packagist':
+        return <ComposerPackages />
+      case this.state.currentTab.id === 'npm':
+        return <NpmPackages />
+      default:
+        return <OtherPackageList />
+    }
   }
 
   render () {
     return (
       <DocumentTitle title={`Projects - ${window.App.name}`}>
         <div className="w-full p-8 md:w-4/5 mx-auto md:p-2 mx-auto flex flex-col mt-8 pt-20 md:pt-8">
-
           <Tabs
             tabs={this.getTabs()}
             selectTab={tab => this.handleTabSelected(tab)}
             currentTab={this.state.currentTab}
           />
-
-          {this.state.currentTab.id === 'packagist' && <PackagistList />}
-          {this.state.currentTab.id === 'npm' && <NpmList />}
-          {this.state.currentTab.id === 'others' && <OtherPackageList />}
+          {this.renderPackageList()}
         </div>
       </DocumentTitle >
-    );
+    )
   }
 }
 
-export default Projects;
+export default Projects
