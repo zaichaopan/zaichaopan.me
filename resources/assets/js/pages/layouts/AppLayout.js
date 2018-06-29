@@ -1,37 +1,44 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import SideNav from '../../components/SideNav';
-
-const propTypes = {
-  children: PropTypes.element.isRequired
-};
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import SideNav from '../../components/SideNav'
+import HamburgerSvg from '../../components/Svg/Hamburger'
+import CloseSvg from '../../components/Svg/Close'
 
 class AppLayout extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       hideMobileNav: true
-    };
+    }
   }
 
   toggleMobileNav () {
     this.setState((prevState, props) => ({
       hideMobileNav: !prevState.hideMobileNav
-    }));
+    }))
   }
 
   closeMobileNav () {
     if (!this.state.hideMobileNav) {
       this.setState({
         hideMobileNav: true
-      });
+      })
     }
   }
 
   render () {
+    const classes = classNames(
+      'left-panel',
+      ' w-3/4',
+      'md:w-1/4',
+      'md:py-8',
+      { 'mobile-hidden': this.state.hideMobileNav }
+    )
+
     return (
       <div className="flex min-h-screen">
-        <div id="left-panel" className={`fixed left-panel border-r border-grey-lighter w-3/4 md:w-1/4 flex align-items justify-center md:py-8 h-full ${this.state.hideMobileNav ? 'mobile-hidden' : ''}`}>
+        <div id="left-panel" className={classes}>
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center mt-8">
               <div>
@@ -53,38 +60,21 @@ class AppLayout extends Component {
             <div className="top-bar-logo">
               <span className="text-grey-darker font-serif">ZAI CHAO PAN</span>
             </div>
-            <div className="flex items-center" onClick={() => this.toggleMobileNav()}>
-              {
-                this.state.hideMobileNav
-                  ? (
-                    <svg
-                      className="fill-current w-4 h-4 cursor-pointer text-grey"
-                      role="button"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20">
-                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                    </svg>
-                  )
-                  : (
-                    <svg
-                      className="fill-current w-4 h-4 cursor-pointer text-grey"
-                      role="button"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20">
-                      <path
-                        d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z">
-                      </path>
-                    </svg>)
-              }
+            <div
+              className="flex items-center"
+              onClick={() => this.toggleMobileNav()}>
+              {this.state.hideMobileNav ? <HamburgerSvg /> : <CloseSvg />}
             </div>
           </div>
           {this.props.children}
         </div>
       </div >
-    );
+    )
   }
 }
 
-AppLayout.propTypes = propTypes;
+AppLayout.propTypes = {
+  children: PropTypes.element.isRequired
+}
 
-export default AppLayout;
+export default AppLayout

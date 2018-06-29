@@ -5,6 +5,7 @@
 }
 
 .left-panel {
+    @apply fixed flex items-center justify-center border-r border-grey-lighter h-full;
     top: 5rem;
     color: #666;
     z-index: 1;
