@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import './lib/nprogress';
-@import './components/sidenav';
-@import './components/tabs';
+
 // pages
 @import './pages/welcome';
 .divider {
@@ -40,3 +39,6 @@
         opacity: 1;
     }
 }
+
+@import '../js/components/Tabs/style';
+@import '../js/components/SideNav/style';

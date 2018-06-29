@@ -25,10 +25,8 @@
         .link {
             @apply relative;
             &:before {
-                @apply bg-grey-dark;
+                @apply bg-grey-dark w-full absolute;
                 content: "";
-                position: absolute;
-                width: 100%;
                 height: 1px;
                 bottom: -5px;
                 left: 0;

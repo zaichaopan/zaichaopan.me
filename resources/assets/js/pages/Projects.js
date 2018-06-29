@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
-import Tabs from '../components/Tabs';
 import PackagistList from '../components/PackagistList';
 import NpmList from '../components/NpmList';
 import OtherPackageList from '../components/OtherPackageList';
+import Tabs from '../components/Tabs';
 
 class Projects extends Component {
   constructor (props) {
@@ -49,6 +49,7 @@ class Projects extends Component {
     return (
       <DocumentTitle title={`Projects - ${window.App.name}`}>
         <div className="w-full p-8 md:w-4/5 mx-auto md:p-2 mx-auto flex flex-col mt-8 pt-20 md:pt-8">
+
           <Tabs
             tabs={this.getTabs()}
             selectTab={tab => this.handleTabSelected(tab)}
