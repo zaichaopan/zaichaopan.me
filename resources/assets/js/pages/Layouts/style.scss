@@ -42,11 +42,11 @@
     }
 }
 
-@screen md {
+@screen lg {
     .left-panel {
         top: 0;
         &.mobile-hidden {
-            transform: translate(0, 0);
+            transform: translate(-100%, 0);
         }
     }
 }

@@ -31,9 +31,10 @@ class AppLayout extends Component {
     const classes = classNames(
       'left-panel',
       'w-full',
-
-      'md:w-1/4',
-      'md:py-8',
+      'overflow-y-auto',
+      'lg:overflow-y-hidden',
+      'lg:w-1/4',
+      'lg:py-8',
       { 'mobile-hidden': this.state.hideMobileNav }
     )
 
@@ -42,7 +43,7 @@ class AppLayout extends Component {
         <div id="left-panel" className={classes}>
           <div className="flex flex-col items-center justify-center h-screen">
             <div className="flex flex-col items-center mt-8">
-              <div className="hidden md:flex flex-col items-center">
+              <div className="hidden lg:flex flex-col items-center">
                 <img
                   className="rounded-full"
                   src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg"
@@ -57,8 +58,8 @@ class AppLayout extends Component {
           </div>
         </div>
 
-        <div className="right-panel flex flex-col w-full md:w-3/4 ml-auto">
-          <div className="top-bar block md:hidden py-2 px-8 border-b border-grey-lighter h-16 flex items-center justify-between fixed bg-white w-full z-10">
+        <div className="right-panel flex flex-col w-full lg:w-3/4 ml-auto">
+          <div className="top-bar block lg:hidden py-2 px-8 border-b border-grey-lighter h-16 flex items-center justify-between fixed bg-white w-full z-10">
             <div className="top-bar-logo flex">
               <a href="/" className="flex no-underline">
                 <img className="rounded-full w-12 h-12"
