@@ -46,7 +46,7 @@
     .left-panel {
         top: 0;
         &.mobile-hidden {
-            transform: translate(-100%, 0);
+            transform: translate(0, 0);
         }
     }
 }
