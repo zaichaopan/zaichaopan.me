@@ -1,5 +1,5 @@
-let mix = require('laravel-mix');
-require('laravel-mix-tailwind');
+let mix = require('laravel-mix')
+require('laravel-mix-tailwind')
 
 /*
  |--------------------------------------------------------------------------
@@ -15,4 +15,4 @@ require('laravel-mix-tailwind');
 mix.react('resources/assets/js/app.js', 'public/js')
   .sass('resources/assets/sass/app.scss', 'public/css')
   .tailwind()
-  .version();
+  .version()

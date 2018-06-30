@@ -6480,6 +6480,10 @@ table {
   font-style: italic;
 }
 
+.work__headline {
+  font-size: 16px;
+}
+
 .divider {
   margin: 20px 0;
   height: 1px;
@@ -6496,8 +6500,13 @@ table {
 }
 
 .keyword {
-  background-color: #f1f8ff;
-  color: #0366d6;
+  color: rgba(0, 0, 0, .68);
+  background: rgba(0, 0, 0, .05);
+}
+
+.keyword:hover {
+  background: rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, .68);
 }
 
 .fade-in {
@@ -6529,6 +6538,32 @@ table {
   100% {
     opacity: 1;
   }
+}
+
+.tracking-wide-extra {
+  letter-spacing: .5rem;
+}
+
+.input-group {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  font-size: .55rem;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+input:placeholder-shown + label {
+  opacity: 0;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
 }
 
 @media (min-width: 576px) {

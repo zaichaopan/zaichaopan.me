@@ -5,12 +5,10 @@
 @import './lib/nprogress';
 // components
 @import '../js/components/Tabs/style';
-
 // pages
 @import '../js/pages/Layouts/style';
 @import '../js/pages/Welcome/style';
-
-
+@import '../js/pages/Work/style';
 .divider {
     margin: 20px 0;
     height: 1px;
@@ -26,8 +24,12 @@
 }
 
 .keyword {
-    background-color: #f1f8ff;
-    color: #0366d6
+    color: rgba(0, 0, 0, .68);
+    background: rgba(0, 0, 0, .05);
+    &:hover {
+        background: rgba(0, 0, 0, .1);
+        color: rgba(0, 0, 0, .68);
+    }
 }
 
 .fade-in {
@@ -44,4 +46,27 @@
     100% {
         opacity: 1;
     }
+}
+
+.tracking-wide-extra {
+    letter-spacing: .5rem;
+}
+
+.input-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    font-size: .55rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+input:placeholder-shown+label {
+    opacity: 0;
+    transform: translateY(1rem);
 }

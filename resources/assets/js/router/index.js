@@ -28,7 +28,7 @@ class App extends Component {
         <div className="flex flex-col min-h-screen">
           <Switch>
             <AppRoute exact path="/" component={Welcome} />
-            <AppRoute path="/signin" component={SignIn} />
+            <Route path="/signin" component={SignIn} />
             <AppRoute path="/projects" component={Projects} />
             <AppRoute path="/work" component={Work} />
             <Route component={NotFound} />

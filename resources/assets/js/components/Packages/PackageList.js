@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { getPureAxiosInstance } from '../../helpers/axios'
 import PropTypes from 'prop-types'
+import { getPureAxiosInstance } from '../../helpers/axios'
+import Loader from '../Loader/index'
 
 class PackageList extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      loading: true,
       packages: []
     }
   }
@@ -16,7 +18,10 @@ class PackageList extends Component {
 
   async fetchPackages () {
     let { data: { results } } = await getPureAxiosInstance().get(this.props.url)
-    this.setState({ packages: this.props.formatResults(results) })
+    this.setState({
+      loading: false,
+      packages: this.props.formatResults(results)
+    })
   }
 
   renderPackageList () {
@@ -45,7 +50,9 @@ class PackageList extends Component {
 
   render () {
     return (
-      <div> {this.renderPackageList()} </div>
+      <div>
+        {this.state.loading ? <Loader /> : this.renderPackageList()}
+      </div>
     )
   }
 }
