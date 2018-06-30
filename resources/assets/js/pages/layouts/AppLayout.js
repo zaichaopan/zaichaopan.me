@@ -30,7 +30,8 @@ class AppLayout extends Component {
   render () {
     const classes = classNames(
       'left-panel',
-      ' w-3/4',
+      'w-full',
+
       'md:w-1/4',
       'md:py-8',
       { 'mobile-hidden': this.state.hideMobileNav }
@@ -39,17 +40,18 @@ class AppLayout extends Component {
     return (
       <div className="flex min-h-screen">
         <div id="left-panel" className={classes}>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center justify-center h-screen">
             <div className="flex flex-col items-center mt-8">
-              <div>
+              <div className="hidden md:flex flex-col items-center">
                 <img
-                  className="rounded"
+                  className="rounded-full"
                   src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg"
                   alt="profile"
                 />
+                <h1 className="p-2 pt-6 tracking-wide text-xl font-serif">ZAI CHAO PAN</h1>
+                <small className="font-light p-2 tracking-wide text-grey-darker">Full-stack Web Developer</small>
               </div>
-              <h1 className="p-2 pt-6 tracking-wide text-xl font-serif">ZAI CHAO PAN</h1>
-              <small className="font-light p-2 tracking-wide text-grey-darker">Full-stack Web Developer</small>
+
               <SideNav closeMobileNav={() => this.closeMobileNav()} />
             </div>
           </div>
@@ -59,7 +61,7 @@ class AppLayout extends Component {
           <div className="top-bar block md:hidden py-2 px-8 border-b border-grey-lighter h-16 flex items-center justify-between fixed bg-white w-full z-10">
             <div className="top-bar-logo flex">
               <a href="/" className="flex no-underline">
-                <img className="rounded w-12 h-12"
+                <img className="rounded-full w-12 h-12"
                   src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg" />
                 <span className="px-2 text-grey-darker font-serif self-center text-sm">ZAI CHAO PAN</span>
               </a>

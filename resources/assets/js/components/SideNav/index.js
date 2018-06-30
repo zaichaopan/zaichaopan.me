@@ -44,7 +44,7 @@ const renderLink = (to, text, openInNewWindow) => {
 
 const SideNav = ({ closeMobileNav }) => {
   return (
-    <ul className="menu list-reset flex flex-col font-thin w-full">
+    <ul className="menu list-reset flex flex-col font-thin w-full text-center md:text-left">
       <li className="divider"></li>
       {renderNavLinks(closeMobileNav)}
       <li className="p-2">

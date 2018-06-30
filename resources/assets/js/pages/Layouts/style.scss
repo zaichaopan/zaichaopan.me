@@ -5,8 +5,7 @@
 }
 
 .left-panel {
-    @apply fixed flex items-center justify-center border-r border-grey-lighter h-full;
-    top: 5rem;
+    @apply fixed flex items-center justify-center border-r border-grey-lighter h-screen;
     color: #666;
     z-index: 1;
     background: #fff;
@@ -17,7 +16,7 @@
     }
     ;
     &.mobile-hidden {
-        transform: translate(-100%, 0);
+        transform: translate(0, -100%);
     }
     a {
         color: #666;

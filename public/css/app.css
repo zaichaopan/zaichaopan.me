@@ -6406,8 +6406,7 @@ table {
           justify-content: center;
   border-right-width: 1px;
   border-color: #f1f5f8;
-  height: 100%;
-  top: 5rem;
+  height: 100vh;
   color: #666;
   z-index: 1;
   background: #fff;
@@ -6422,8 +6421,8 @@ table {
 }
 
 .left-panel.mobile-hidden {
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
 }
 
 .left-panel a {
