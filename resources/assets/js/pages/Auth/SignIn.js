@@ -76,7 +76,7 @@ class SignIn extends Component {
       <DocumentTitle title={`Sign in - ${window.App.name}`}>
         <div className="flex justify-center items-center w-full py-4 flex-col min-h-screen">
 
-          <div className="bg-white border-grey-light w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/4 px-8 py-4">
+          <div className="bg-white border-grey-light w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/4 px-8 py-4 mb-8">
             <form
               onSubmit={e => this.handleSubmit(e)}
               method="POST">

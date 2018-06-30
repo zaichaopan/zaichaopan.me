@@ -16,9 +16,9 @@ const NotFound = (props) => {
         </svg>Back
       </a>
 
-      <div className="flex flex-col items-center m-auto">
+      <div className="flex flex-col flex-1 items-center justify-center mb-8">
         <h1 className="text-base uppercase tracking-wide-extra">Not Found</h1>
-        <p className="text-grey-dark font-thin py-4 text-sm"> You didn’t do anything wrong. We may have moved the page you’re looking for somewhere else. </p>
+        <p className="text-grey-dark font-thin py-4 text-sm text-center">Sorry, can&#39;t found that page! </p>
       </div>
 
     </div>
