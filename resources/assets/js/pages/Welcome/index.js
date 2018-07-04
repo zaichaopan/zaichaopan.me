@@ -31,7 +31,7 @@ const Welcome = () => {
           <strong>&nbsp;
             <a
               className="text-grey-darkest"
-              href="https://www.npmjs.com/settings/zaichaopan/packages"
+              href="https://www.npmjs.com/search?q=zaichaopan"
               target="_blank"
               rel="noopener noreferrer">npm</a></strong>.</p>
 
