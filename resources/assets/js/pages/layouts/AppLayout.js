@@ -63,7 +63,7 @@ class AppLayout extends Component {
             <div className="top-bar-logo flex">
               <a href="/" className="flex no-underline">
                 <img className="rounded-full w-12 h-12"
-                  src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg" />
+                  src="https://pbs.twimg.com/profile_images/1018989386149449729/XPqSPLsQ_400x400.jpg" />
                 <span className="px-2 text-grey-darker font-serif self-center text-sm">ZAI CHAO PAN</span>
               </a>
             </div>
