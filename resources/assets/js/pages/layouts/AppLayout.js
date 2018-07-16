@@ -46,7 +46,7 @@ class AppLayout extends Component {
               <div className="hidden lg:flex flex-col items-center">
                 <img
                   className="rounded-full"
-                  src="https://pbs.twimg.com/profile_images/1005856683493486593/DgOU6T4k_400x400.jpg"
+                  src="https://pbs.twimg.com/profile_images/1018989386149449729/XPqSPLsQ_400x400.jpg"
                   alt="profile"
                 />
                 <h1 className="p-2 pt-6 tracking-wide text-xl font-serif">ZAI CHAO PAN</h1>
