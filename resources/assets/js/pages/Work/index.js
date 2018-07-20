@@ -8,21 +8,24 @@ class Work extends Component {
         <div className="work w-full p-8 md:w-4/5 mx-auto md:p-2 mx-auto flex flex-col mt-8 pt-20 md:pt-8">
           <h1 className="mb-4 work__headline font-bold tracking-wide-extra">Work</h1>
           <div>
-            <div className="flex justify-between py-2">
-              <h2 className="tracking-wide text-sm text-grey-darker font-bold">Seabreeze Connect Inc</h2>
-              <div className="text-xs text-grey-dark">Sept 2016 - June 2018</div>
+            <div className="flex justify-between py-1  flex-wrap">
+              <h2 className="tracking-wide text-sm text-grey-darker font-bold">
+                Full Stack developer @Seabreeze Connect Inc
+              </h2>
+              <div className="text-xs text-grey-dark">Vancouver, BC</div>
+            </div>
+            <div className="flex text-xs text-grey-darker justify-between items-center mb-3">
+              Sept 2016 - June 2018
             </div>
 
             <div className="text-grey-darker text-sm">
-              <p className="pb-1">Seabreeze is a travel tech startup based out of &nbsp;
+              <p className="pb-2">Seabreeze is a travel tech startup based out of &nbsp;
                 <a
                   href="http://venturelabs.ca/companies"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-grey-darker">SFU VentureLabs Tech Accelerator</a>.
-              </p>
-
-              <p className="pb-1">The very first web product launched -
+                The very first web product launched -
                 <a
                   href="https://seabreezeconnect.com"
                   className="text-grey-darker"
@@ -38,16 +41,34 @@ class Work extends Component {
               </p>
 
               <p className="mt-2">
-                <em className="underline">As a full-stack web developer</em>, I converted wireframes, graphic design and mock-ups into fully-functional web applications. I also maintained functionality, fixed bug and wrote automated tests.
+                <em>As a full-stack web developer</em>, I converted wireframes, graphic design and mock-ups into fully-functional web applications. I also maintained functionality, fixed bug and wrote automated tests. <strong>My responsibilities including</strong>:
               </p>
 
               <ul className="mt-3 tracking-wide">
-                <li className="py-1">Implement application features, transform wireframes and mock-ups into working software
+                <li className="font-light">
+                  Full stack development
                 </li>
-                <li className="py-1">Work with project manager and other stakeholders to develop and plan technical strategies and deliver applications that support business requirements</li>
-                <li className="py-1">TroubleShoot, debug software, resolve bugs and write automated tests to improve code quality</li>
-                <li className="py-1">Pair with other team members on new features, refactoring and code review</li>
-                <li className="py-1">Research and employ new web-based technologies</li>
+                <li className="font-light">
+                  Transform wireframes and mock-ups into working software
+                </li>
+                <li className="font-light">
+                  Deliver applications that support business requirements
+                </li>
+                <li className="font-light">
+                  Work with project manager to plan product features and requirements
+                </li>
+                <li className="font-light">
+                  TroubleShoot, debug software, resolve bugs
+                </li>
+                <li className="font-light">
+                  Write automated tests to improve code quality
+                </li>
+                <li className="font-light">
+                  Pair with other team members on new features, refactoring and code review
+                </li>
+                <li className="font-light">
+                  Research and employ new web-based technologies
+                </li>
               </ul>
             </div>
           </div>
